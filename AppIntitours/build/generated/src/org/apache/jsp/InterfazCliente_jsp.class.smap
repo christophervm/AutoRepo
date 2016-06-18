@@ -1,0 +1,23 @@
+SMAP
+InterfazCliente_jsp.java
+JSP
+*S JSP
+*F
++ 0 InterfazCliente.jsp
+InterfazCliente.jsp
+*L
+5,41:55
+46:96,10
+47,2:106
+48:176,11
+49:187,6
+50:193
+50,19:110
+68:218,11
+69,2:229
+71,3:231,3
+74,5:240
+78,18:131
+96:149,3
+97,7:152
+*E
