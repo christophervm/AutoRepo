@@ -50,7 +50,7 @@ public class UsuarioServlet extends HttpServlet {
          
            try {
             request.getSession().invalidate();
-            response.sendRedirect("InicioSesionRecepcionista.jsp");
+            response.sendRedirect("MenuPrincipal.jsp");
         } catch (Exception ex) {
          
         }}
@@ -142,7 +142,7 @@ public class UsuarioServlet extends HttpServlet {
              Empleado em = port.validaSes(nomusr,passwd);
              if (em !=null) {
                    request.getSession().setAttribute("emp", em);
- response.sendRedirect("RegistroAlquiler.jsp");
+ response.sendRedirect("InterfazRecepcionista.jsp");
     
             }else{
              String err = "ERROR NO EXISTE EL USUARIO O CONTRASEÑA INCORRECTA";

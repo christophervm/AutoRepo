@@ -28,6 +28,12 @@
 <message name="ListarAlqNoEntxPlacaResponse">
 <part name="parameters" element="tns:ListarAlqNoEntxPlacaResponse"/>
 </message>
+<message name="ListarAutoxPlaca">
+<part name="parameters" element="tns:ListarAutoxPlaca"/>
+</message>
+<message name="ListarAutoxPlacaResponse">
+<part name="parameters" element="tns:ListarAutoxPlacaResponse"/>
+</message>
 <portType name="ServicioListar">
 <operation name="ListarCliente">
 <input wsam:Action="http://services/ServicioListar/ListarClienteRequest" message="tns:ListarCliente"/>
@@ -44,6 +50,10 @@
 <operation name="ListarAlqNoEntxPlaca">
 <input wsam:Action="http://services/ServicioListar/ListarAlqNoEntxPlacaRequest" message="tns:ListarAlqNoEntxPlaca"/>
 <output wsam:Action="http://services/ServicioListar/ListarAlqNoEntxPlacaResponse" message="tns:ListarAlqNoEntxPlacaResponse"/>
+</operation>
+<operation name="ListarAutoxPlaca">
+<input wsam:Action="http://services/ServicioListar/ListarAutoxPlacaRequest" message="tns:ListarAutoxPlaca"/>
+<output wsam:Action="http://services/ServicioListar/ListarAutoxPlacaResponse" message="tns:ListarAutoxPlacaResponse"/>
 </operation>
 </portType>
 <binding name="ServicioListarPortBinding" type="tns:ServicioListar">
@@ -76,6 +86,15 @@
 </output>
 </operation>
 <operation name="ListarAlqNoEntxPlaca">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="ListarAutoxPlaca">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
