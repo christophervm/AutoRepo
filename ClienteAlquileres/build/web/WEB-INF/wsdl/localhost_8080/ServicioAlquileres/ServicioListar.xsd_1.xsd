@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services/">
+
+<xs:element name="ListarAlqNoEntxPlaca" type="tns:ListarAlqNoEntxPlaca"/>
+
+<xs:element name="ListarAlqNoEntxPlacaResponse" type="tns:ListarAlqNoEntxPlacaResponse"/>
+
+<xs:element name="ListarAlquiNoEnt" type="tns:ListarAlquiNoEnt"/>
+
+<xs:element name="ListarAlquiNoEntResponse" type="tns:ListarAlquiNoEntResponse"/>
+
+<xs:element name="ListarAutoxPlaca" type="tns:ListarAutoxPlaca"/>
+
+<xs:element name="ListarAutoxPlacaResponse" type="tns:ListarAutoxPlacaResponse"/>
+
+<xs:element name="ListarCliente" type="tns:ListarCliente"/>
+
+<xs:element name="ListarClienteResponse" type="tns:ListarClienteResponse"/>
+
+<xs:element name="operation" type="tns:operation"/>
+
+<xs:element name="operationResponse" type="tns:operationResponse"/>
+
+<xs:complexType name="ListarCliente">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ListarClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="brevet" type="xs:string" minOccurs="0"/>
+<xs:element name="carnetEx" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="nomusr" type="xs:string" minOccurs="0"/>
+<xs:element name="passwd" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListarAutoxPlaca">
+<xs:sequence>
+<xs:element name="placa" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListarAutoxPlacaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:auto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="auto">
+<xs:sequence>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="modelo" type="tns:modelo" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="placa" type="xs:string" minOccurs="0"/>
+<xs:element name="precio" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modelo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="marca" type="tns:marca" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="marca">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="operation">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="operationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:auto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListarAlqNoEntxPlaca">
+<xs:sequence>
+<xs:element name="placa" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListarAlqNoEntxPlacaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:alquiler" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="alquiler">
+<xs:sequence>
+<xs:element name="clie" type="tns:cliente" minOccurs="0"/>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="fechalim" type="tns:date" minOccurs="0"/>
+<xs:element name="fechares" type="tns:date" minOccurs="0"/>
+<xs:element name="placa" type="tns:auto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="date">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ListarAlquiNoEnt">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ListarAlquiNoEntResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:alquiler" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
