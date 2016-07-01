@@ -1,6 +1,6 @@
 <%-- 
-    Document   : InicioSesion
-    Created on : 30/06/2016, 12:14:22 PM
+    Document   : InicioSesionCliente
+    Created on : 01/07/2016, 10:47:39 AM
     Author     : alumno
 --%>
 
@@ -12,8 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-           <form action="UsuarioServlet">
-            <input type="hidden" name="accion" value="inicior" />
+         <form action="UsuarioServlet">
+            <input type="hidden" name="accion" value="inicioc" />
             <table>
                 <tr>
                     <td>Nombre de Usuario</td>
