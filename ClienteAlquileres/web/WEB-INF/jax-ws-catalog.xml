@@ -10,4 +10,6 @@
     <system systemId="http://localhost:8080/ServicioAlquileres/ServicioSes?xsd=1" uri="wsdl/localhost_8080/ServicioAlquileres/ServicioSes.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ServicioAlquileres/ServicioEntrega?wsdl" uri="wsdl/localhost_8080/ServicioAlquileres/ServicioEntrega.wsdl"/>
     <system systemId="http://localhost:8080/ServicioAlquileres/ServicioEntrega?xsd=1" uri="wsdl/localhost_8080/ServicioAlquileres/ServicioEntrega.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioReserva?wsdl" uri="wsdl/localhost_8080/ServicioAlquileres/ServicioReserva.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioReserva?xsd=1" uri="wsdl/localhost_8080/ServicioAlquileres/ServicioReserva.xsd_1.xsd"/>
 </catalog>

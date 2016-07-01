@@ -112,8 +112,9 @@
     }
     %>
     <%-- end web service invocation --%><hr/>
-
-                
+    <tr>
+                 <th colspan="3"><a href="UsuarioServlet?accion=cerrarsesion">Cerrar sesión</a></th>      
+                      </tr>
                 
             </table>
             
