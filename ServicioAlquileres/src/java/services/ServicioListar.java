@@ -69,6 +69,20 @@ AlquilerDaoImpl aldao = new AlquilerDaoImpl();
           
         return alq;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "ListarAutoxPlaca")
+    public Auto ListarAutoxPlaca(@WebParam(name = "placa") String placa) {
+      
+        Auto au = audao.buscarXPlaca(placa);
+        
+        
+        return au;
+    }
+    
+    
     
     
 }

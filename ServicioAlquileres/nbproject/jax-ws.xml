@@ -13,6 +13,9 @@
     <service name="ServicioEntrega">
       <implementation-class>services.ServicioEntrega</implementation-class>
     </service>
+    <service name="ServicioReserva">
+      <implementation-class>services.ServicioReserva</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
