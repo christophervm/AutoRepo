@@ -7,6 +7,7 @@ package services;
 import daoImpl.AlquilerDaoImpl;
 import daoImpl.AutoDaoImpl;
 import daoImpl.ClienteDaoImpl;
+import daoImpl.ReservaDAOImpl;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
@@ -15,6 +16,7 @@ import javax.jws.WebParam;
 import model.Alquiler;
 import model.Auto;
 import model.Cliente;
+import model.Reserva;
 
 /**
  *
@@ -25,6 +27,7 @@ public class ServicioListar {
 AutoDaoImpl audao = new AutoDaoImpl();
 ClienteDaoImpl clidao = new ClienteDaoImpl();
 AlquilerDaoImpl aldao = new AlquilerDaoImpl();
+ReservaDAOImpl resdao = new ReservaDAOImpl();
     /**
      * This is a sample web service operation
      */
@@ -80,6 +83,28 @@ AlquilerDaoImpl aldao = new AlquilerDaoImpl();
         
         
         return au;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "ListarGenAlquileres")
+    public List<Alquiler> ListarGenAlquileres() {
+             List<Alquiler> listaAlquiler = new ArrayList<Alquiler>();
+        listaAlquiler = aldao.ListaAlquiler();
+        
+        return listaAlquiler;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "ListaGenReserva")
+    public List<Reserva> ListaGenReserva() {
+      List<Reserva> listaReserva = new ArrayList<Reserva>();
+        listaReserva = resdao.ReservaEmp();
+        
+        return listaReserva;
     }
     
     
