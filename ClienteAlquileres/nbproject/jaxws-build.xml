@@ -90,5 +90,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/services"/>
         <delete dir="${build.generated.dir}/jax-wsCache/ServicioEntrega"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-ServicioListar, wsimport-client-ServicioAlquiler, wsimport-client-ServicioSes, wsimport-client-ServicioEntrega"/>
+    <target name="wsimport-client-ServicioReserva" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioReserva"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioReserva" destdir="${build.generated.dir}/jax-wsCache/ServicioReserva" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ServicioReserva/wsdl/localhost_8080/ServicioAlquileres/ServicioReserva.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8080/ServicioAlquileres/ServicioReserva?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ServicioReserva/wsdl/localhost_8080/ServicioAlquileres/ServicioReserva.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioReserva"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioReserva">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioReserva" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/services"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioReserva"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ServicioListar, wsimport-client-ServicioAlquiler, wsimport-client-ServicioSes, wsimport-client-ServicioEntrega, wsimport-client-ServicioReserva"/>
 </project>
