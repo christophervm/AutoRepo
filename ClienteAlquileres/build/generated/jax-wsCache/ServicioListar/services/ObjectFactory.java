@@ -28,9 +28,11 @@ public class ObjectFactory {
     private final static QName _ListarClienteResponse_QNAME = new QName("http://services/", "ListarClienteResponse");
     private final static QName _ListarAlqNoEntxPlaca_QNAME = new QName("http://services/", "ListarAlqNoEntxPlaca");
     private final static QName _ListarAlquiNoEnt_QNAME = new QName("http://services/", "ListarAlquiNoEnt");
+    private final static QName _ListarAutoxPlacaResponse_QNAME = new QName("http://services/", "ListarAutoxPlacaResponse");
     private final static QName _OperationResponse_QNAME = new QName("http://services/", "operationResponse");
     private final static QName _ListarAlquiNoEntResponse_QNAME = new QName("http://services/", "ListarAlquiNoEntResponse");
     private final static QName _ListarCliente_QNAME = new QName("http://services/", "ListarCliente");
+    private final static QName _ListarAutoxPlaca_QNAME = new QName("http://services/", "ListarAutoxPlaca");
     private final static QName _Operation_QNAME = new QName("http://services/", "operation");
 
     /**
@@ -46,6 +48,14 @@ public class ObjectFactory {
      */
     public Operation createOperation() {
         return new Operation();
+    }
+
+    /**
+     * Create an instance of {@link ListarAutoxPlaca }
+     * 
+     */
+    public ListarAutoxPlaca createListarAutoxPlaca() {
+        return new ListarAutoxPlaca();
     }
 
     /**
@@ -70,6 +80,14 @@ public class ObjectFactory {
      */
     public OperationResponse createOperationResponse() {
         return new OperationResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarAutoxPlacaResponse }
+     * 
+     */
+    public ListarAutoxPlacaResponse createListarAutoxPlacaResponse() {
+        return new ListarAutoxPlacaResponse();
     }
 
     /**
@@ -197,6 +215,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarAutoxPlacaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "ListarAutoxPlacaResponse")
+    public JAXBElement<ListarAutoxPlacaResponse> createListarAutoxPlacaResponse(ListarAutoxPlacaResponse value) {
+        return new JAXBElement<ListarAutoxPlacaResponse>(_ListarAutoxPlacaResponse_QNAME, ListarAutoxPlacaResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OperationResponse }{@code >}}
      * 
      */
@@ -221,6 +248,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://services/", name = "ListarCliente")
     public JAXBElement<ListarCliente> createListarCliente(ListarCliente value) {
         return new JAXBElement<ListarCliente>(_ListarCliente_QNAME, ListarCliente.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarAutoxPlaca }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "ListarAutoxPlaca")
+    public JAXBElement<ListarAutoxPlaca> createListarAutoxPlaca(ListarAutoxPlaca value) {
+        return new JAXBElement<ListarAutoxPlaca>(_ListarAutoxPlaca_QNAME, ListarAutoxPlaca.class, null, value);
     }
 
     /**
