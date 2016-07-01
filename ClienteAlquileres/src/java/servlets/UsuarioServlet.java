@@ -57,7 +57,9 @@ public class UsuarioServlet extends HttpServlet {
             if (accion.equals("buscar")) {
                 buscarc(request,response);
             }
-            
+             if (accion.equalsIgnoreCase("inicioc")) {
+                inisc(request,response);
+            }
             
             
             
@@ -170,6 +172,46 @@ public class UsuarioServlet extends HttpServlet {
         } catch (Exception e) {
         }
        
+        
+    }
+
+    private void inisc(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      
+        
+        
+        
+          
+        try {
+
+            
+               services.ServicioSes port = service.getServicioSesPort();
+     
+       String nomusr = request.getParameter("txtNomUsr");
+            String passwd = request.getParameter("txtPasswd");
+            
+             Cliente em = port.validarSesClie(nomusr,passwd);
+             if (em !=null) {
+                   request.getSession().setAttribute("emp", em);
+ response.sendRedirect("InterfazCliente.jsp");
+    
+            }else{
+             String err = "ERROR NO EXISTE EL USUARIO O CONTRASEÑA INCORRECTA";
+            request.setAttribute("err",err);
+            request.getRequestDispatcher("InicioSesionCliente.jsp").forward(request, response);
+             
+             }
+             
+
+     
+        } catch (Exception e) {
+            String err = "ERROR NO EXISTE EL USUARIO O CONTRASEÑA INCORRECTA";
+            request.setAttribute("err",err);
+            request.getRequestDispatcher("InicioSesionCliente.jsp").forward(request, response);
+        }
+         
+    
+        
+        
         
     }
 
