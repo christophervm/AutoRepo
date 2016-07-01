@@ -78,6 +78,18 @@ public interface ServicioListar {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<services.Alquiler>
+     */
+    @WebMethod(operationName = "ListarGenAlquileres")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "ListarGenAlquileres", targetNamespace = "http://services/", className = "services.ListarGenAlquileres")
+    @ResponseWrapper(localName = "ListarGenAlquileresResponse", targetNamespace = "http://services/", className = "services.ListarGenAlquileresResponse")
+    @Action(input = "http://services/ServicioListar/ListarGenAlquileresRequest", output = "http://services/ServicioListar/ListarGenAlquileresResponse")
+    public List<Alquiler> listarGenAlquileres();
+
+    /**
+     * 
      * @param placa
      * @return
      *     returns services.Auto
@@ -90,5 +102,17 @@ public interface ServicioListar {
     public Auto listarAutoxPlaca(
         @WebParam(name = "placa", targetNamespace = "")
         String placa);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<services.Reserva>
+     */
+    @WebMethod(operationName = "ListaGenReserva")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "ListaGenReserva", targetNamespace = "http://services/", className = "services.ListaGenReserva")
+    @ResponseWrapper(localName = "ListaGenReservaResponse", targetNamespace = "http://services/", className = "services.ListaGenReservaResponse")
+    @Action(input = "http://services/ServicioListar/ListaGenReservaRequest", output = "http://services/ServicioListar/ListaGenReservaResponse")
+    public List<Reserva> listaGenReserva();
 
 }

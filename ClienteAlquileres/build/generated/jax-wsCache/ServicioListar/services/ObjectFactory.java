@@ -25,21 +25,65 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _ListarAlqNoEntxPlacaResponse_QNAME = new QName("http://services/", "ListarAlqNoEntxPlacaResponse");
-    private final static QName _ListarClienteResponse_QNAME = new QName("http://services/", "ListarClienteResponse");
+    private final static QName _ListarGenAlquileres_QNAME = new QName("http://services/", "ListarGenAlquileres");
     private final static QName _ListarAlqNoEntxPlaca_QNAME = new QName("http://services/", "ListarAlqNoEntxPlaca");
-    private final static QName _ListarAlquiNoEnt_QNAME = new QName("http://services/", "ListarAlquiNoEnt");
-    private final static QName _ListarAutoxPlacaResponse_QNAME = new QName("http://services/", "ListarAutoxPlacaResponse");
     private final static QName _OperationResponse_QNAME = new QName("http://services/", "operationResponse");
+    private final static QName _ListarAutoxPlacaResponse_QNAME = new QName("http://services/", "ListarAutoxPlacaResponse");
+    private final static QName _ListaGenReserva_QNAME = new QName("http://services/", "ListaGenReserva");
     private final static QName _ListarAlquiNoEntResponse_QNAME = new QName("http://services/", "ListarAlquiNoEntResponse");
-    private final static QName _ListarCliente_QNAME = new QName("http://services/", "ListarCliente");
-    private final static QName _ListarAutoxPlaca_QNAME = new QName("http://services/", "ListarAutoxPlaca");
     private final static QName _Operation_QNAME = new QName("http://services/", "operation");
+    private final static QName _ListarAutoxPlaca_QNAME = new QName("http://services/", "ListarAutoxPlaca");
+    private final static QName _ListarClienteResponse_QNAME = new QName("http://services/", "ListarClienteResponse");
+    private final static QName _ListaGenReservaResponse_QNAME = new QName("http://services/", "ListaGenReservaResponse");
+    private final static QName _ListarAlquiNoEnt_QNAME = new QName("http://services/", "ListarAlquiNoEnt");
+    private final static QName _ListarGenAlquileresResponse_QNAME = new QName("http://services/", "ListarGenAlquileresResponse");
+    private final static QName _ListarCliente_QNAME = new QName("http://services/", "ListarCliente");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: services
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link ListarCliente }
+     * 
+     */
+    public ListarCliente createListarCliente() {
+        return new ListarCliente();
+    }
+
+    /**
+     * Create an instance of {@link ListarAlquiNoEnt }
+     * 
+     */
+    public ListarAlquiNoEnt createListarAlquiNoEnt() {
+        return new ListarAlquiNoEnt();
+    }
+
+    /**
+     * Create an instance of {@link ListarGenAlquileresResponse }
+     * 
+     */
+    public ListarGenAlquileresResponse createListarGenAlquileresResponse() {
+        return new ListarGenAlquileresResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListaGenReservaResponse }
+     * 
+     */
+    public ListaGenReservaResponse createListaGenReservaResponse() {
+        return new ListaGenReservaResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarClienteResponse }
+     * 
+     */
+    public ListarClienteResponse createListarClienteResponse() {
+        return new ListarClienteResponse();
     }
 
     /**
@@ -59,11 +103,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarCliente }
+     * Create an instance of {@link ListaGenReserva }
      * 
      */
-    public ListarCliente createListarCliente() {
-        return new ListarCliente();
+    public ListaGenReserva createListaGenReserva() {
+        return new ListaGenReserva();
     }
 
     /**
@@ -91,14 +135,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarAlquiNoEnt }
-     * 
-     */
-    public ListarAlquiNoEnt createListarAlquiNoEnt() {
-        return new ListarAlquiNoEnt();
-    }
-
-    /**
      * Create an instance of {@link ListarAlqNoEntxPlaca }
      * 
      */
@@ -107,11 +143,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarClienteResponse }
+     * Create an instance of {@link ListarGenAlquileres }
      * 
      */
-    public ListarClienteResponse createListarClienteResponse() {
-        return new ListarClienteResponse();
+    public ListarGenAlquileres createListarGenAlquileres() {
+        return new ListarGenAlquileres();
     }
 
     /**
@@ -179,6 +215,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Reserva }
+     * 
+     */
+    public Reserva createReserva() {
+        return new Reserva();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ListarAlqNoEntxPlacaResponse }{@code >}}
      * 
      */
@@ -188,12 +232,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarClienteResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarGenAlquileres }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services/", name = "ListarClienteResponse")
-    public JAXBElement<ListarClienteResponse> createListarClienteResponse(ListarClienteResponse value) {
-        return new JAXBElement<ListarClienteResponse>(_ListarClienteResponse_QNAME, ListarClienteResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services/", name = "ListarGenAlquileres")
+    public JAXBElement<ListarGenAlquileres> createListarGenAlquileres(ListarGenAlquileres value) {
+        return new JAXBElement<ListarGenAlquileres>(_ListarGenAlquileres_QNAME, ListarGenAlquileres.class, null, value);
     }
 
     /**
@@ -206,12 +250,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarAlquiNoEnt }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OperationResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services/", name = "ListarAlquiNoEnt")
-    public JAXBElement<ListarAlquiNoEnt> createListarAlquiNoEnt(ListarAlquiNoEnt value) {
-        return new JAXBElement<ListarAlquiNoEnt>(_ListarAlquiNoEnt_QNAME, ListarAlquiNoEnt.class, null, value);
+    @XmlElementDecl(namespace = "http://services/", name = "operationResponse")
+    public JAXBElement<OperationResponse> createOperationResponse(OperationResponse value) {
+        return new JAXBElement<OperationResponse>(_OperationResponse_QNAME, OperationResponse.class, null, value);
     }
 
     /**
@@ -224,12 +268,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OperationResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListaGenReserva }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services/", name = "operationResponse")
-    public JAXBElement<OperationResponse> createOperationResponse(OperationResponse value) {
-        return new JAXBElement<OperationResponse>(_OperationResponse_QNAME, OperationResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services/", name = "ListaGenReserva")
+    public JAXBElement<ListaGenReserva> createListaGenReserva(ListaGenReserva value) {
+        return new JAXBElement<ListaGenReserva>(_ListaGenReserva_QNAME, ListaGenReserva.class, null, value);
     }
 
     /**
@@ -242,12 +286,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarCliente }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Operation }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services/", name = "ListarCliente")
-    public JAXBElement<ListarCliente> createListarCliente(ListarCliente value) {
-        return new JAXBElement<ListarCliente>(_ListarCliente_QNAME, ListarCliente.class, null, value);
+    @XmlElementDecl(namespace = "http://services/", name = "operation")
+    public JAXBElement<Operation> createOperation(Operation value) {
+        return new JAXBElement<Operation>(_Operation_QNAME, Operation.class, null, value);
     }
 
     /**
@@ -260,12 +304,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Operation }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarClienteResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services/", name = "operation")
-    public JAXBElement<Operation> createOperation(Operation value) {
-        return new JAXBElement<Operation>(_Operation_QNAME, Operation.class, null, value);
+    @XmlElementDecl(namespace = "http://services/", name = "ListarClienteResponse")
+    public JAXBElement<ListarClienteResponse> createListarClienteResponse(ListarClienteResponse value) {
+        return new JAXBElement<ListarClienteResponse>(_ListarClienteResponse_QNAME, ListarClienteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListaGenReservaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "ListaGenReservaResponse")
+    public JAXBElement<ListaGenReservaResponse> createListaGenReservaResponse(ListaGenReservaResponse value) {
+        return new JAXBElement<ListaGenReservaResponse>(_ListaGenReservaResponse_QNAME, ListaGenReservaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarAlquiNoEnt }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "ListarAlquiNoEnt")
+    public JAXBElement<ListarAlquiNoEnt> createListarAlquiNoEnt(ListarAlquiNoEnt value) {
+        return new JAXBElement<ListarAlquiNoEnt>(_ListarAlquiNoEnt_QNAME, ListarAlquiNoEnt.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarGenAlquileresResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "ListarGenAlquileresResponse")
+    public JAXBElement<ListarGenAlquileresResponse> createListarGenAlquileresResponse(ListarGenAlquileresResponse value) {
+        return new JAXBElement<ListarGenAlquileresResponse>(_ListarGenAlquileresResponse_QNAME, ListarGenAlquileresResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarCliente }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "ListarCliente")
+    public JAXBElement<ListarCliente> createListarCliente(ListarCliente value) {
+        return new JAXBElement<ListarCliente>(_ListarCliente_QNAME, ListarCliente.class, null, value);
     }
 
 }
