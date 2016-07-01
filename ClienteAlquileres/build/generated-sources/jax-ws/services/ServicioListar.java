@@ -76,4 +76,19 @@ public interface ServicioListar {
         @WebParam(name = "placa", targetNamespace = "")
         String placa);
 
+    /**
+     * 
+     * @param placa
+     * @return
+     *     returns services.Auto
+     */
+    @WebMethod(operationName = "ListarAutoxPlaca")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "ListarAutoxPlaca", targetNamespace = "http://services/", className = "services.ListarAutoxPlaca")
+    @ResponseWrapper(localName = "ListarAutoxPlacaResponse", targetNamespace = "http://services/", className = "services.ListarAutoxPlacaResponse")
+    @Action(input = "http://services/ServicioListar/ListarAutoxPlacaRequest", output = "http://services/ServicioListar/ListarAutoxPlacaResponse")
+    public Auto listarAutoxPlaca(
+        @WebParam(name = "placa", targetNamespace = "")
+        String placa);
+
 }
