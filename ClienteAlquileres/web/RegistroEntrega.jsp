@@ -118,7 +118,9 @@
               <tr>
                  <th colspan="3"><a href="UsuarioServlet?accion=cerrarsesion">Cerrar sesión</a></th>      
                       </tr>    
-                
+                  <tr>
+                 <th colspan="3"><a href="InterfazRecepcionista.jsp">Volver al menú principal</a></th>      
+                      </tr>
                 
             
             
