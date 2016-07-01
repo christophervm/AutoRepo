@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioSesion?wsdl" uri="src/conf/xml-resources/web-service-references/ServicioSesion/wsdl/localhost_8080/ServicioAlquileres/ServicioSesion.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioSesion?xsd=1" uri="src/conf/xml-resources/web-service-references/ServicioSesion/wsdl/localhost_8080/ServicioAlquileres/ServicioSesion.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioAlquiler?wsdl" uri="src/conf/xml-resources/web-service-references/ServicioAlquiler/wsdl/localhost_8080/ServicioAlquileres/ServicioAlquiler.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioAlquiler?xsd=1" uri="src/conf/xml-resources/web-service-references/ServicioAlquiler/wsdl/localhost_8080/ServicioAlquileres/ServicioAlquiler.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioSes?wsdl" uri="src/conf/xml-resources/web-service-references/ServicioSes/wsdl/localhost_8080/ServicioAlquileres/ServicioSes.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioSes?xsd=1" uri="src/conf/xml-resources/web-service-references/ServicioSes/wsdl/localhost_8080/ServicioAlquileres/ServicioSes.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioEntrega?wsdl" uri="src/conf/xml-resources/web-service-references/ServicioEntrega/wsdl/localhost_8080/ServicioAlquileres/ServicioEntrega.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioEntrega?xsd=1" uri="src/conf/xml-resources/web-service-references/ServicioEntrega/wsdl/localhost_8080/ServicioAlquileres/ServicioEntrega.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioListar?wsdl" uri="src/conf/xml-resources/web-service-references/ServicioListar/wsdl/localhost_8080/ServicioAlquileres/ServicioListar.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioAlquileres/ServicioListar?xsd=1" uri="src/conf/xml-resources/web-service-references/ServicioListar/wsdl/localhost_8080/ServicioAlquileres/ServicioListar.xsd_1.xsd"/>
+</catalog>
