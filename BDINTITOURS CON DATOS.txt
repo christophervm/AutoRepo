@@ -13,14 +13,14 @@ GO
 
 CREATE TABLE TBMarca
 (CodMarca int identity not null primary key,
- Descripcion_Marca varchar(50)not null
+ Descripcion_Marca varchar(50)not null unique
 )
 GO
 
 CREATE TABLE TBModelo
 (CodModelo int identity not null primary key,
  CodMarca int not null,
- Descripcion varchar(50)not null,
+ Descripcion varchar(50)not null unique,
  foreign key (CodMarca) references TBMarca
 )
 GO
