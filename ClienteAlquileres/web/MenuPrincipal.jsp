@@ -8,38 +8,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-  
-        <link href="styles/estilo.css" rel="stylesheet" type="text/css"/>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>¡Alquila un Auto en Intitours!</title>
     </head>
-    <body background="resources/cuerpo.jpg">
-        <div class="menu">
-            <h4>¿Necesitas Transporte?</h4>
-            <h4>¡Alquila un Auto en Intitours!</h4>
-   
-        </div>
-        
+    <body>
+            <table align="center">
+              <tr>
+                  <td><a href="RegistroUsuario.jsp"><img src="imagenes/registrar.jpg" width="250px"  title="Regsitar Usuario"></a></td>           
+              </tr>
+          </table>
+        </br>
+        </br>
+        </br>
+        </br>
         <div>
-           <ul class="listaMenu">
-            <li> ¡Alquila un automóvil en Intitours!</li>
-            <li><a href="InicioSesionCliente.jsp">Iniciar Sesión</a></li>
-            <li><a href="RegistroUsuario.jsp">Registrarse</a></li>
-         
-        </ul>
-        </div>
-        
-        <div>
-    
-        </div>
-        <div>
-             <ul class="listaMenu">
-        
-            <li><a href="InicioSesionRecepcionista.jsp">Login Empleados</a></li>
-
-         
-        </ul>
-        </div>
-            
-    </body>
+            <table align="center">
+                <tr>
+                    <td><a href="MenuPrincipal.jsp"><img src="imagenes/logo0.png" width="250px" title="Menu Principal"></a></td>
+                    <td><a href="ListarAuto.jsp"><img src="imagenes/logo4.png" width="250px" title="Listado de Autos"></a></td>
+                    <td><a href="InicioSesionCliente.jsp"><img src="imagenes/logo5.png" width="250px" title="Login"></a></td>
+                </tr>
+            </table>
+            <table align="center">
+             <tr>
+              <td><font size="30px"><h4>¡Alquila Auto en Intitours...! !Ya...!</h4> </font>  </td>
+                </tr>
+                  </table>   
+            ${respo}
+      </div>
+    </body>       
 </html>

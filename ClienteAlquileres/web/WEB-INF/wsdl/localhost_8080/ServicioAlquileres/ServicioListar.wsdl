@@ -4,17 +4,17 @@
 <xsd:import namespace="http://services/" schemaLocation="http://localhost:8080/ServicioAlquileres/ServicioListar?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="ListarCliente">
-<part name="parameters" element="tns:ListarCliente"/>
-</message>
-<message name="ListarClienteResponse">
-<part name="parameters" element="tns:ListarClienteResponse"/>
-</message>
 <message name="operation">
 <part name="parameters" element="tns:operation"/>
 </message>
 <message name="operationResponse">
 <part name="parameters" element="tns:operationResponse"/>
+</message>
+<message name="ListarCliente">
+<part name="parameters" element="tns:ListarCliente"/>
+</message>
+<message name="ListarClienteResponse">
+<part name="parameters" element="tns:ListarClienteResponse"/>
 </message>
 <message name="ListarAlquiNoEnt">
 <part name="parameters" element="tns:ListarAlquiNoEnt"/>
@@ -28,17 +28,17 @@
 <message name="ListarAlqNoEntxPlacaResponse">
 <part name="parameters" element="tns:ListarAlqNoEntxPlacaResponse"/>
 </message>
-<message name="ListarGenAlquileres">
-<part name="parameters" element="tns:ListarGenAlquileres"/>
-</message>
-<message name="ListarGenAlquileresResponse">
-<part name="parameters" element="tns:ListarGenAlquileresResponse"/>
-</message>
 <message name="ListarAutoxPlaca">
 <part name="parameters" element="tns:ListarAutoxPlaca"/>
 </message>
 <message name="ListarAutoxPlacaResponse">
 <part name="parameters" element="tns:ListarAutoxPlacaResponse"/>
+</message>
+<message name="ListarGenAlquileres">
+<part name="parameters" element="tns:ListarGenAlquileres"/>
+</message>
+<message name="ListarGenAlquileresResponse">
+<part name="parameters" element="tns:ListarGenAlquileresResponse"/>
 </message>
 <message name="ListaGenReserva">
 <part name="parameters" element="tns:ListaGenReserva"/>
@@ -47,13 +47,13 @@
 <part name="parameters" element="tns:ListaGenReservaResponse"/>
 </message>
 <portType name="ServicioListar">
-<operation name="ListarCliente">
-<input wsam:Action="http://services/ServicioListar/ListarClienteRequest" message="tns:ListarCliente"/>
-<output wsam:Action="http://services/ServicioListar/ListarClienteResponse" message="tns:ListarClienteResponse"/>
-</operation>
 <operation name="operation">
 <input wsam:Action="http://services/ServicioListar/operationRequest" message="tns:operation"/>
 <output wsam:Action="http://services/ServicioListar/operationResponse" message="tns:operationResponse"/>
+</operation>
+<operation name="ListarCliente">
+<input wsam:Action="http://services/ServicioListar/ListarClienteRequest" message="tns:ListarCliente"/>
+<output wsam:Action="http://services/ServicioListar/ListarClienteResponse" message="tns:ListarClienteResponse"/>
 </operation>
 <operation name="ListarAlquiNoEnt">
 <input wsam:Action="http://services/ServicioListar/ListarAlquiNoEntRequest" message="tns:ListarAlquiNoEnt"/>
@@ -63,13 +63,13 @@
 <input wsam:Action="http://services/ServicioListar/ListarAlqNoEntxPlacaRequest" message="tns:ListarAlqNoEntxPlaca"/>
 <output wsam:Action="http://services/ServicioListar/ListarAlqNoEntxPlacaResponse" message="tns:ListarAlqNoEntxPlacaResponse"/>
 </operation>
-<operation name="ListarGenAlquileres">
-<input wsam:Action="http://services/ServicioListar/ListarGenAlquileresRequest" message="tns:ListarGenAlquileres"/>
-<output wsam:Action="http://services/ServicioListar/ListarGenAlquileresResponse" message="tns:ListarGenAlquileresResponse"/>
-</operation>
 <operation name="ListarAutoxPlaca">
 <input wsam:Action="http://services/ServicioListar/ListarAutoxPlacaRequest" message="tns:ListarAutoxPlaca"/>
 <output wsam:Action="http://services/ServicioListar/ListarAutoxPlacaResponse" message="tns:ListarAutoxPlacaResponse"/>
+</operation>
+<operation name="ListarGenAlquileres">
+<input wsam:Action="http://services/ServicioListar/ListarGenAlquileresRequest" message="tns:ListarGenAlquileres"/>
+<output wsam:Action="http://services/ServicioListar/ListarGenAlquileresResponse" message="tns:ListarGenAlquileresResponse"/>
 </operation>
 <operation name="ListaGenReserva">
 <input wsam:Action="http://services/ServicioListar/ListaGenReservaRequest" message="tns:ListaGenReserva"/>
@@ -78,7 +78,7 @@
 </portType>
 <binding name="ServicioListarPortBinding" type="tns:ServicioListar">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="ListarCliente">
+<operation name="operation">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -87,7 +87,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="operation">
+<operation name="ListarCliente">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -114,7 +114,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="ListarGenAlquileres">
+<operation name="ListarAutoxPlaca">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -123,7 +123,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="ListarAutoxPlaca">
+<operation name="ListarGenAlquileres">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

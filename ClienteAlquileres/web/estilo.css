@@ -1,0 +1,230 @@
+/* 
+    Document   : estilos
+    Created on : 30/03/2016, 10:49:01 AM
+    Author     : alumno
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+body{
+
+    background-color :white;
+}
+.tablaDatosLogo1{
+    width: 1050px;
+    min-height: 370px;
+    margin: 0 auto;
+ border-style: dashed;
+    background-image: url("imagenes/evento_inicio1.png");
+        font-family: "Arial Black";  
+}
+
+.tablaDatosLogo2{
+    width: 230px;
+    min-height: 230px;
+    margin: 0 auto;
+ border-style: dashed;
+    background-image: url("imagenes/images (1).jpg");
+        font-family: "Arial Black";  
+}
+.menu { 
+   margin-left: 500px;
+   margin-top:60px;
+   border: 8px;
+   width: 580px;
+   font-family: "Arial Black";
+    font-size : 25px;
+    text-align: center;
+    
+}
+
+.contenido{
+    margin-left: 180px;
+    padding: 10px;
+  font-family: "Arial Black";
+    font-size : 15px;
+    margin : 0 auto;
+    margin-top:200px;
+
+}
+
+.listaMenu{
+    list-style: none;
+    width: 650px;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+    font-family: "Arial Black";
+    font-size : 15px;
+    
+}
+.titulo{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+}
+.listaMenu li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+ 
+}
+.listaMenu li a:hover{
+    color: yellow;
+}
+
+.tablaFRM{
+    width: 450px;
+    margin: 0 auto;
+   
+    background: #faf2dd;    
+  
+}
+.tablaFRM tr:nth-child(1) td{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px;
+}
+.tablaFRM td:nth-child(1){ 
+    text-align: right;
+}
+.tablaFRM td{
+    padding: 5px;
+}
+
+.tablaFRM input[type="text"],
+.tablaFRM input[type="password"]{
+     -radius: 5px;
+    padding: 4px;
+}
+.tablaFRM select option{
+    padding: 5px;
+}
+.tablaFRM input[type="submit"]{
+     border: 1px solid black;
+    border-radius: 8px;
+    padding: 6px;
+    font-weight: bold;
+    background: red;
+    transition: background 0.8s;
+}
+.tablaFRM input[type="submit"]:hover{
+    background: bisque;
+}
+
+.tablaDatos{
+    width: 550px;
+    margin: 0 auto;
+ //border-style: dashed;
+    background:  lightgray;
+        font-family: "Arial Black";  
+}
+.tablaDatos tr:nth-child(1) td{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px;
+      font-family: "Arial Black";
+}
+
+
+.tablaDatos td, th{
+    padding: 3px 0;
+
+      font-family: "Arial Black";
+}
+
+.listaD{
+    
+    width: 650px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top:70px;
+     border-style: dashed;
+  background: lightgray;
+    font-family: "Arial Black";
+    font-size : 15px;
+     
+}
+.tablaC{
+    width: 650px;
+    margin: 0 auto;
+       background: #faf2dd;
+
+    
+}
+
+.listaD input[type="submit"]{
+    border : 1px solid black;
+     -radius: 8px;
+    padding: 6px;
+    font-weight: bold;
+    background: #abe0b4;
+    transition: background 0.8s;
+        margin : 0 auto;
+}
+.listaD  input[type="submit"]:hover{
+    background: #97c5a9;
+}
+
+.listaD input[type="button"]{
+   border  : 1px solid black;
+     -radius: 8px;
+    padding: 6px;
+    font-weight: bold;
+    background: #abe0b4;
+    transition: background 0.8s;
+    margin : 0 auto;
+}
+.listaD  input[type="button"]:hover{
+    background: #97c5a9;
+}
+
+.tablaDatos input[type="submit"]{
+    border : 1px solid black;
+     border-radius: 8px;
+    padding: 6px;
+    font-weight: bold;
+    background: #abe0b4;
+    transition: background 0.8s;
+    margin : 0 auto;
+}
+.tablaDatos  input[type="submit"]:hover{
+    background: #97c5a9;
+}
+
+.tablaListarD{
+    width: 200px;
+    margin: 0 auto;
+     border-style: dashed;
+   background: #faf2dd;
+        font-family: "Arial Black";
+        float:left;   
+}
+
+.listaDd{
+    
+    width: 650px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 70px;
+    font-family: "Arial Black";
+    font-size : 15px;
+    float:left;
+    
+}
+
+.tablaEnt{
+    width: 750px;
+    margin: 0 auto;
+    background: #faf2dd;
+        font-family: "Arial Black";
+        margin-top : 100px;
+    
+}
+

@@ -9,49 +9,82 @@
 <!DOCTYPE html>
 <html>
     <head>
+         <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
-            Bienvenido ${emp.nombre}
+       <jsp:include page="InterfazRecepcionista.jsp"></jsp:include>  
+       </br>
+                   <div class="tablaDatos">    
              <form action="UsuarioServlet">
-                      <div class="listaD">
-                          <table>
-                             <input type="hidden" name="accion" value="buscar" />
+                     <table>
+                      <input type="hidden" name="accion" value="buscar" />
                   <tr>
-                 <td>Buscar por nombre de usuario</td>
+                 <td>                           
+                     Buscar por nombre de usuario:
+                 </td>
                  <td>
-                     <input type="text" name="txtUsuarioBuscar" placeholder="Busque aquí al cliente" />
+                     <input type="text" name="txtUsuarioBuscar" placeholder="Busque aquí al cliente" size="40px"/>
                  </td>
                  <td>
                      <input  type="submit" value="Buscar" />                    
                  </td>
-             </tr>  
+             </tr> 
              <tr>
                  <td>${cli.codigo}</td>
                  <td>${cli.nombre}</td>
                  <td>${cli.apellidos}</td>
                  <td>${cli.usuario.nomusr}</td>
              </tr>
-   
-                          </table>
- 
-                      </div>
+            </table>   
              </form>
-        
-        
-        <form action="AlquilerServlet">
-            <input type="hidden" name="accion" value="alquilar" />
-  
-         
-        <table>
-           
-              
-               
+             
+             
+                       <form action="AlquilerServlet">
+                                       <input type="hidden" name="accion" value="alquilares" />
+                   <div class="listaD" >
+                            <input type="button" id="botonocultamuestra" value="Min" style="font-size:14px;cursor:pointer;margin:15px;padding:5px;" onclick="minimizar('divregistoalquilereserva')" />
+                 
+                              <input type="button" id="botonocultamuestra" value="Max" style="font-size:14px;cursor:pointer;margin:15px;padding:5px;" onclick="maximizar('divregistoalquilereserva')" />  
+                  
+                              <table id="divregistoalquilereserva">
+         <tr>
+                <th colspan="4">REGISTRE EL ALQUILER</th>
+            </tr>
             <tr>
-        
+                ${res}
+                <td>INGRESE EL CÓDIGO DE RESERVA</td>
                 <td>
-            <select name="cboAuto">
+                    <input type="text" name="txtCodReserva" value="" />
+                </td>     
+                <td>
+                    <input type="submit" value="Registrar" />
+                </td>
+                
+            </tr>
+            ${resultado}
+                       </table>
+            
+                   </div>  
+                     
+                     
+                     
+                 </form>
+             
+     
+             
+             
+             
+                </div>
+             </br>
+             <div class="tablaDatos">
+        <form action="AlquilerServlet">
+            <input type="hidden" name="accion" value="alquilar" />      
+        <table align="center"> 
+            <tr>  
+                <td>Autos dispponibles:            
+            <select name="cboAuto">              
                         <%-- start web service invocation --%><hr/>
     <%
     try {
@@ -81,8 +114,8 @@
  </td>
     </tr>
     <tr>
-        <td>
-            <input type="text" name="txtCliente" value="" />
+        <td>Cliente Reservado:
+            <input type="text" name="txtCliente" value="" placeholder="ingrese su reserva a cliente" size="40px" />
         </td>
     </tr>
     ${resul}
@@ -101,28 +134,18 @@
           <tr>
               <td><%=cl.getCodigo()%></td>
               <td><%=cl.getNombre()%></td>
-               <td><%=cl.getApellidos()%></td>
-                <td><%=cl.getUsuario().getNomusr()%></td>
-          </tr>
-                    
-                    <%
+              <td><%=cl.getApellidos()%></td>
+              <td><%=cl.getUsuario().getNomusr()%></td>
+          </tr>           
+            <%
         }
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
     }
     %>
     <%-- end web service invocation --%><hr/>
-    <tr>
-                 <th colspan="3"><a href="UsuarioServlet?accion=cerrarsesion">Cerrar sesión</a></th>      
-                      </tr>
-                  <tr>
-                 <th colspan="3"><a href="InterfazRecepcionista.jsp">Volver al menú principal</a></th>      
-                      </tr>
-            </table>
-            
-            
-        
- </form>
- 
+          </table>
+        </form>        
+       </div>    
     </body>
 </html>

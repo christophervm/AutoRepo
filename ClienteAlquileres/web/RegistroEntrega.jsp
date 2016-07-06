@@ -12,21 +12,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+         <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
-      ${err}
-        
-         
+    <body>  
+        <jsp:include page="InterfazRecepcionista.jsp"></jsp:include>
+      ${err}     
+       </br>
+      <div class="tablaDatos"> 
         <form action="AlquilerServlet">
             <input type="hidden" name="accion" value="buscarp" />
-            <div>
-                <table class="tablaDatos">
+                <table align="center" >
                     <tr>
                         <td>Bucar placas no entregadas</td>
                         <td>
-                            <input type="text" name="txtPlacaBuscar" value="" />
+                            <input type="text" name="txtPlacaBuscar" value="" placeholder="ingrese su placa a buscar" size="50px"/>
                         </td>
                         <td>
                             <input type="submit" value="Buscar" />
@@ -37,47 +38,38 @@
                         <td>${alq.clie.nombre}</td>
                         <td>${alq.clie.apellidos}</td>
                         <td>${alq.placa.placa}</td>
-                    </tr>
-                    
-                </table>
-            </div>
+                    </tr>                 
+                </table> 
         </form> 
-        
-        
-           
+              </div>     
+                    </br>
+       <div class="tablaDatos">
      <form action="AlquilerServlet">
          <input type="hidden" name="accion" value="entregar" />
-    
-                  <div>
-                     
-                      <table class="tablaDatos">
+                      <table align="center">
                          <tr>
                             <th>Ingrese Código de alquiler : </th>
-                          <td style="text-align: center;"> <input type="text" name="txtCodigo" value="" /></td> 
+                          <td style="text-align: center;"> <input type="text" name="txtCodigo" value="" placeholder="ingrese su codigo de alquiler" size="10px" /></td> 
                       </tr> 
                       <tr>
                               <th>Ingrese Placa : </th>
-                          <td style="text-align: center;"> <input type="text" name="txtPlaca" value="" /></td> 
-                      </tr>
-                      
+                          <td style="text-align: center;"> <input type="text" name="txtPlaca" value="" placeholder="ingrese su placa de auto"  size="10px"/></td> 
+                      </tr>                      
                       <tr>
                           <th colspan="5">
                               <input type="submit" value="Registrar Entrega" />
                           </th>
-                      </tr>
+                      </tr>   
                   <tr>
-                      <th colspan="7">LISTA GENERAL DE ALQUILERES NO ENTREGADOS</th>
+                   <th colspan="7">LISTA GENERAL DE ALQUILERES NO ENTREGADOS</th>
                   </tr>
-      
                 <tr>
                 <tr>
                     <th>Código</th>
-   
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Placa</th>
-                </tr>
-                  
+                </tr>     
                   <%-- start web service invocation --%><hr/>
     <%
     try {
@@ -103,32 +95,16 @@
                   <td>
                    <%=al.getPlaca().getPlaca()%>
             </td>
-        </tr>
-                  
-                  
+        </tr>                            
                   <%
         }
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
     }
     %>
-    <%-- end web service invocation --%><hr/>
-       
-                
-              <tr>
-                 <th colspan="3"><a href="UsuarioServlet?accion=cerrarsesion">Cerrar sesión</a></th>      
-                      </tr>    
-                  <tr>
-                 <th colspan="3"><a href="InterfazRecepcionista.jsp">Volver al menú principal</a></th>      
-                      </tr>
-                
-            
-            
-        </table>
-                    </div>
+    <%-- end web service invocation --%><hr/>       
+        </table>       
         </form>
-        
-
-        
+          </div>
     </body>
 </html>

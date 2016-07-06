@@ -16,6 +16,12 @@
 <message name="BuscarClienteResponse">
 <part name="parameters" element="tns:BuscarClienteResponse"/>
 </message>
+<message name="AlquilarReserva">
+<part name="parameters" element="tns:AlquilarReserva"/>
+</message>
+<message name="AlquilarReservaResponse">
+<part name="parameters" element="tns:AlquilarReservaResponse"/>
+</message>
 <portType name="ServicioAlquiler">
 <operation name="RegistrarAlquiler">
 <input wsam:Action="http://services/ServicioAlquiler/RegistrarAlquilerRequest" message="tns:RegistrarAlquiler"/>
@@ -24,6 +30,10 @@
 <operation name="BuscarCliente">
 <input wsam:Action="http://services/ServicioAlquiler/BuscarClienteRequest" message="tns:BuscarCliente"/>
 <output wsam:Action="http://services/ServicioAlquiler/BuscarClienteResponse" message="tns:BuscarClienteResponse"/>
+</operation>
+<operation name="AlquilarReserva">
+<input wsam:Action="http://services/ServicioAlquiler/AlquilarReservaRequest" message="tns:AlquilarReserva"/>
+<output wsam:Action="http://services/ServicioAlquiler/AlquilarReservaResponse" message="tns:AlquilarReservaResponse"/>
 </operation>
 </portType>
 <binding name="ServicioAlquilerPortBinding" type="tns:ServicioAlquiler">
@@ -38,6 +48,15 @@
 </output>
 </operation>
 <operation name="BuscarCliente">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="AlquilarReserva">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
